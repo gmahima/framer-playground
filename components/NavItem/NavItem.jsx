@@ -110,13 +110,13 @@ export const NavItem = ({ children }) => {
           <motion.div
             className="w-40 absolute  bg-gray-100 shadow-xl p-4 rounded flex flex-col items-center space-y-4"
             style={{
-              x: -3,
-              y: -10.2,
-              rotateX: -43,
-              rotateY: 0,
-              scale: 0.9
+                transformOrigin: '50% 0%'
             }}
-            animate={{ x: 0, y: 10, rotateX: 0, rotateY: 0, scale:1 }}
+            initial={{
+              rotateX: -40,
+              opacity: 0
+            }}
+            animate={{ rotateX: 0, opacity: 1  }}
           >
             <motion.div>Product 1</motion.div>
             <motion.div>Product 1</motion.div>
