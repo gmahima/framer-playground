@@ -85,7 +85,7 @@
 // // };
 
 import { useState } from "react";
-import { motion, useMotionValue, useTransform } from "framer-motion";
+import { motion} from "framer-motion";
 
 export const NavItem = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -99,8 +99,8 @@ export const NavItem = ({ children }) => {
       {isOpen && (
         <div
           style={{
-            width: 100,
-            height: 100,
+            width: 1,
+            height: 1,
             backgroundColor: "transparent",
             perspective: 900,
             position: "absolute",
