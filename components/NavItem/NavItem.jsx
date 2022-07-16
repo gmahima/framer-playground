@@ -112,10 +112,11 @@ export const NavItem = ({ children }) => {
             style={{
               x: -3,
               y: -10.2,
-              rotateX: 20,
-              rotateY: -0.8,
+              rotateX: -43,
+              rotateY: 0,
+              scale: 0.9
             }}
-            animate={{ x: 0, y: 0, rotateX: 0, rotateY: 0 }}
+            animate={{ x: 0, y: 10, rotateX: 0, rotateY: 0, scale:1 }}
           >
             <motion.div>Product 1</motion.div>
             <motion.div>Product 1</motion.div>
