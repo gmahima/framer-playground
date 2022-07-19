@@ -8,7 +8,6 @@ export const LandingPara = ({ children, dir }) => {
   const isInView = useInView(ref, {once: true});
   useEffect(() => {
     if (isInView) {
-      console.log("Element is in view: ", isInView);
       controls.start({
         opacity: 1,
         x: 0,

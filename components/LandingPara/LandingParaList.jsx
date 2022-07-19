@@ -4,7 +4,7 @@ export const LandingParaList = () => {
   let list = []; 
   for (let i = 0; i < 10; i++) {
     list.push (
-      <LandingPara dir={i % 2 == 0 ? "left" : "right"}>
+      <LandingPara key={i} dir={i % 2 == 0 ? "left" : "right"}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Velit dignissim
         sodales ut eu sem integer vitae justo. Sapien pellentesque habitant
