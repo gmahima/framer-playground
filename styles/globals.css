@@ -14,3 +14,7 @@ a {
 * {
   box-sizing: border-box;
 }
+.background-image {
+  background-color: red;
+  background-image: url("../public/bg1.png")
+}
