@@ -1,1 +1,3 @@
-export * from './LandingPara'
+export * from "./LandingPara";
+
+export * from "./LandingParaList";
