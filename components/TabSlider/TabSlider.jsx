@@ -4,21 +4,21 @@ import { Card } from "./Card";
 import { ingredients } from "../../data";
 import { useState } from "react";
 import { Tab } from "./Tab";
-import { TabsContainer } from "./TabsContainer";
+import { TabBar } from "./TabBar";
 export const TabSlider = ({ children }) => {
   const [selectedItem, setSelectedItem] = useState(ingredients[0]);
   return (
     <TabSliderLayout.Container>
-      <TabsContainer>
+      <TabBar>
         {ingredients.map((item, i) => (
           <Tab
             isItemSelected={selectedItem == item}
             setSelectedItem={setSelectedItem}
             item={item}
             key={item.label}
-          ></Tab>
+          >{console.log(selectedItem, item, selectedItem==item)}</Tab>
         ))}
-      </TabsContainer>
+      </TabBar>
       <AnimatePresence exitBeforeEnter>
         <Card
           key={selectedItem ? selectedItem.label : "empty"}

@@ -5,6 +5,7 @@ export const theme = {
         landingParaWidth: '50%',
         staggerCardWidth: '300px',
         staggerCardHeight: '300px',
-        tabSliderWidth: '700px'
+        tabSliderWidth: '700px',
+        tabUnderlineHeight: '1px'
     }
 }

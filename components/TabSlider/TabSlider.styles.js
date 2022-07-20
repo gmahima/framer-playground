@@ -13,16 +13,36 @@ const Container = styled(motion.div)`
 const CardContainer = styled(motion.div)`
   ${({ theme }) => css``}
 `;
-const TabsContainer = styled(motion.div)`
+const TabBar = styled(motion.div)`
   ${({ theme }) => css`
     display: grid;
     grid-auto-flow: column;
-    gap: 1rem;
   `}
 `;
+const TabContainer = styled(motion.div)`
+  ${({ theme }) => css`
 
+  `}
+`;
+const Tab = styled(motion.div)`
+  ${({ theme }) => css`
+    display: grid;
+    grid-auto-flow: column;
+  `}
+`;
+const TabUnderline = styled(motion.div)`
+  ${({ theme, isItemSelected }) => css`
+    height: ${theme.sizes.tabUnderlineHeight};
+    width: 100%;
+    background-color: ${theme.colors.bg};
+    display: ${isItemSelected ? "block" : "none"};
+  `}
+`;
 export const TabSliderLayout = {
   Container,
   CardContainer,
-  TabsContainer,
+  TabBar,
+  TabContainer,
+  Tab,
+  TabUnderline,
 };
