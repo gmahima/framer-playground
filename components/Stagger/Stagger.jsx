@@ -4,10 +4,10 @@ import { StaggerCard } from "./StaggerCard";
 export const Stagger = () => {
   return (
     <StaggerLayout.Container>
-      <StaggerCard>g</StaggerCard>
-      <StaggerCard>sdfg</StaggerCard>
-      <StaggerCard>sdfg</StaggerCard>
-      <StaggerCard>sdfg</StaggerCard>
+      <StaggerCard></StaggerCard>
+      <StaggerCard></StaggerCard>
+      <StaggerCard></StaggerCard>
+      <StaggerCard></StaggerCard>
     </StaggerLayout.Container>
   );
 };
