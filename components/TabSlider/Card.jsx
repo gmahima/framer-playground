@@ -1,11 +1,11 @@
 import { TabSliderLayout } from "./TabSlider.styles";
 import { motion } from "framer-motion";
-export const TabSliderCard = ({ children, ...props }) => {
+export const Card = ({ children, ...props }) => {
   return(
-    <TabSliderLayout.Card
+    <TabSliderLayout.CardContainer
     {...props}
   >
     {children}
-  </TabSliderLayout.Card>
+  </TabSliderLayout.CardContainer>
   );
 };

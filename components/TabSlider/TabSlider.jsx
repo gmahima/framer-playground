@@ -1,23 +1,26 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { TabSliderLayout } from "./TabSlider.styles";
-import { TabSliderCard } from "./TabSliderCard";
+import { Card } from "./Card";
 import { ingredients } from "../../data";
 import { useState } from "react";
-import { TabSliderTab } from "./TabSliderTab";
+import { Tab } from "./Tab";
+import { TabsContainer } from "./TabsContainer";
 export const TabSlider = ({ children }) => {
   const [selectedItem, setSelectedItem] = useState(ingredients[0]);
   return (
     <TabSliderLayout.Container>
-      {ingredients.map((item, i) => (
-        <TabSliderTab
-          isItemSelected={selectedItem == item}
-          setSelectedItem={setSelectedItem}
-          item={item}
-          key={item.label}
-        ></TabSliderTab>
-      ))}
+      <TabsContainer>
+        {ingredients.map((item, i) => (
+          <Tab
+            isItemSelected={selectedItem == item}
+            setSelectedItem={setSelectedItem}
+            item={item}
+            key={item.label}
+          ></Tab>
+        ))}
+      </TabsContainer>
       <AnimatePresence exitBeforeEnter>
-        <TabSliderCard
+        <Card
           key={selectedItem ? selectedItem.label : "empty"}
           initial={{ y: 10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -25,7 +28,7 @@ export const TabSlider = ({ children }) => {
           transition={{ duration: 0.2 }}
         >
           {selectedItem ? selectedItem.icon : "😋"}
-        </TabSliderCard>
+        </Card>
       </AnimatePresence>
     </TabSliderLayout.Container>
   );

@@ -10,12 +10,19 @@ const Container = styled(motion.div)`
     padding: 0.5rem;
   `}
 `;
-const Card = styled(motion.div)`
+const CardContainer = styled(motion.div)`
+  ${({ theme }) => css``}
+`;
+const TabsContainer = styled(motion.div)`
   ${({ theme }) => css`
-    background-color: ${theme.colors.secondary}
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1rem;
   `}
 `;
+
 export const TabSliderLayout = {
   Container,
-  Card,
+  CardContainer,
+  TabsContainer,
 };
