@@ -5,8 +5,9 @@ const Container = styled.div`
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 100vw;
-    background-color: ${theme.colors.primary}
+    width: 100%;
+    background-color: ${theme.colors.primary};
+    z-index: -1;
   `}
 `;
 
