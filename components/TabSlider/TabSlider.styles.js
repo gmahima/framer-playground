@@ -20,9 +20,7 @@ const TabBar = styled(motion.div)`
   `}
 `;
 const TabContainer = styled(motion.div)`
-  ${({ theme }) => css`
-
-  `}
+  ${({ theme }) => css``}
 `;
 const Tab = styled(motion.div)`
   ${({ theme }) => css`
@@ -31,11 +29,10 @@ const Tab = styled(motion.div)`
   `}
 `;
 const TabUnderline = styled(motion.div)`
-  ${({ theme, isItemSelected }) => css`
+  ${({ theme }) => css`
     height: ${theme.sizes.tabUnderlineHeight};
     width: 100%;
     background-color: ${theme.colors.bg};
-    display: ${isItemSelected ? "block" : "none"};
   `}
 `;
 export const TabSliderLayout = {

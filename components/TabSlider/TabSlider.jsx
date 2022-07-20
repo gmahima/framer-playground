@@ -16,7 +16,7 @@ export const TabSlider = ({ children }) => {
             setSelectedItem={setSelectedItem}
             item={item}
             key={item.label}
-          >{console.log(selectedItem, item, selectedItem==item)}</Tab>
+          ></Tab>
         ))}
       </TabBar>
       <AnimatePresence exitBeforeEnter>
