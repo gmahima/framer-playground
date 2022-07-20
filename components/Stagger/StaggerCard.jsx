@@ -1,8 +1,8 @@
 import { StaggerLayout } from "./Stagger.styles";
-
-export const StaggerCard = ({ children }) => {
+import { motion } from "framer-motion";
+export const StaggerCard = ({ children, ...props }) => {
   return (
-    <StaggerLayout.StaggerCardContainer>
+    <StaggerLayout.StaggerCardContainer {...props}>
       {children}
     </StaggerLayout.StaggerCardContainer>
   );

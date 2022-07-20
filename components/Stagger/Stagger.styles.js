@@ -2,9 +2,10 @@ import styled, { css } from "styled-components";
 import { motion } from "framer-motion";
 const StaggerCardContainer = styled(motion.div)`
   ${({ theme }) => css`
-    /* width: ${theme.sizes.staggerCardWidth}; */
+    width: ${theme.sizes.staggerCardWidth};
     height: ${theme.sizes.staggerCardHeight};
     background-color: ${theme.colors.primary};
+    margin-top: 5px;
 
 `}
 `;
