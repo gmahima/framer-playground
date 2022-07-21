@@ -12,14 +12,14 @@ const ChangingText = styled(motion.div)`
     position: relative;
     bottom: 0px;
     font-weight: ${theme.textStyles.changingTextFontWeight};
-    font-size: 52px;
-    line-height: 60px;;
+    font-size: ${theme.textStyles.changingTextFontSize};
+    line-height: ${theme.textStyles.changingTextLineHeight};
   `}
 `;
 const ChangingTextContainer = styled(motion.div)`
   ${({ theme }) => css`
     overflow: hidden;
-    height: 60px;
+    height: ${theme.textStyles.changingTextLineHeight}
   `}
 `;
 const OtherContent = styled(motion.div)`

@@ -1,4 +1,5 @@
 export const textStyles = {
     changingTextFontWeight: 'bold',
-    changingTextFontSize: '4rem'
+    changingTextFontSize: '52px',
+    changingTextLineHeight: '60px'
 }
