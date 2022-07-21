@@ -1,33 +1,57 @@
 import { ChangingTextLayout } from "./ChangingText.styles";
 import { useState, useEffect, useRef } from "react";
-import { AnimatePresence, motion, useInView } from "framer-motion";
+import { AnimatePresence, motion, useInView, useAnimationControls } from "framer-motion";
 import { lorem } from "../../data";
-let arr = [
-  { text: "hi", bg: "primary" },
-  { text: "lorem", bg: "secondary" },
-  { text: "ipsum", bg: "bg" },
-  { text: "dolor", bg: "highlight" }
+import { useMemo } from "react";
+import { useTheme } from "styled-components";
+import { useFreshRef } from "rooks";
+
+const arr = [
+  { text: "hi", variant: "primary" },
+  { text: "lorem", variant: "secondary" },
+  { text: "dolor", variant: "highlight" },
 ];
+
+const textVariants = {
+  initial: { y: 10 },
+  animate: { y: 0 },
+  exit: { y: 10 },
+  transition: { duration: 0.2 },
+};
 export const ChangingText = ({ children }) => {
-  let [selectedItem, setSelectedItem] = useState(arr[0]);
   const ref = useRef(null);
   const isInView = useInView(ref);
-
+  const theme = useTheme();
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const currentIndexRef = useFreshRef(currentIndex);
+  const controls = useAnimationControls()
   useEffect(() => {
-      const interval = setTimeout(() => {
-        let i = arr.findIndex(ob => ob == selectedItem)
-        console.log("tick", selectedItem);
-        if (selectedItem == arr[arr.length - 1]) {
-          setSelectedItem(arr[0]);
-        } else {
-          setSelectedItem(arr[i+1]);
-        }
-      }, 1000 * 2);
+    const interval = setInterval(() => {
+      setCurrentIndex((currentIndexRef.current + 1) % arr.length);
+    }, 3000);
+    return () => {
+      clearInterval(interval);
+    };
+  }, [currentIndex]);
+  const selectedItem = arr[currentIndex];
 
-      return () => {
-        clearInterval(interval);
-      };
-  }, [selectedItem]);
+  const variants = useMemo(() => {
+    return {
+      primary: {
+        backgroundColor: theme.colors.primary,
+      },
+      secondary: {
+        backgroundColor: theme.colors.secondary,
+      },
+      highlight: {
+        backgroundColor: theme.colors.highlight,
+      },
+    };
+  }, [theme]);
+
+  const selectedVariant = selectedItem.variant;
+  console.log(variants[selectedVariant].backgroundColor);
+
   return (
     <div>
       <div>{lorem.long}</div>
@@ -35,13 +59,22 @@ export const ChangingText = ({ children }) => {
       <AnimatePresence exitBeforeEnter>
         <ChangingTextLayout.Container
           ref={ref}
-          initial={{ y: 10 }}
-          animate={{ y: 0 }}
-          exit={{ y: 10 }}
-          transition = {{duration: 0.2}}
-          key={selectedItem? selectedItem.text : "x"}
+          key={selectedItem ? selectedItem.text : "x"}
+          variants={variants}
+          transition={{
+            duration: 2
+          }}
         >
-          {selectedItem.text}
+          <motion.div
+            variants={textVariants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            layout
+          >
+            {selectedItem.text}
+          </motion.div>
+          <motion.div>{lorem.short}</motion.div>
         </ChangingTextLayout.Container>
       </AnimatePresence>
     </div>
