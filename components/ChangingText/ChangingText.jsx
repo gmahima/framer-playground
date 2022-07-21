@@ -14,7 +14,6 @@ export const ChangingText = ({ children }) => {
   const isInView = useInView(ref);
 
   useEffect(() => {
-    if (true) {
       const interval = setTimeout(() => {
         let i = arr.findIndex(ob => ob == selectedItem)
         console.log("tick", selectedItem);
@@ -28,19 +27,18 @@ export const ChangingText = ({ children }) => {
       return () => {
         clearInterval(interval);
       };
-    }
   }, [selectedItem]);
   return (
     <div>
       <div>{lorem.long}</div>
 
-      <AnimatePresence>
+      <AnimatePresence exitBeforeEnter>
         <ChangingTextLayout.Container
           ref={ref}
-          bg={selectedItem.bg}
-          initial={{ y: -10 }}
+          initial={{ y: 10 }}
           animate={{ y: 0 }}
           exit={{ y: 10 }}
+          transition = {{duration: 0.2}}
           key={selectedItem? selectedItem.text : "x"}
         >
           {selectedItem.text}
