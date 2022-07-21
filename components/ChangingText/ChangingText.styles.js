@@ -19,7 +19,7 @@ const ChangingText = styled(motion.div)`
 const ChangingTextContainer = styled(motion.div)`
   ${({ theme }) => css`
     overflow: hidden;
-    height: ${theme.textStyles.changingTextLineHeight}
+    height: ${theme.textStyles.changingTextLineHeight};
   `}
 `;
 const OtherContent = styled(motion.div)`
