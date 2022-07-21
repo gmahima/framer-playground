@@ -5,10 +5,10 @@ import { lorem, arrWithColors } from "../../data";
 import { useTheme } from "styled-components";
 import { useFreshRef } from "rooks";
 const textVariants = {
-  initial: { y: 10 },
-  animate: { y: 0 },
-  exit: { y: 10 },
-  transition: { duration: 0.2 },
+  initial: { y: 4, opacity: 1 },
+  animate: { y: 0, opacity: 1 },
+  exit: { y: -4, opacity: 1 },
+  transition: { y: { duration: 0.1 }, default: { ease: "linear" } },
 };
 
 export const ChangingText = () => {
@@ -44,24 +44,24 @@ export const ChangingText = () => {
 
   return (
     <div>
-      <AnimatePresence exitBeforeEnter>
-        <ChangingTextLayout.Container
-          ref={ref}
+      <ChangingTextLayout.Container
+        ref={ref}
           variants={containerVariants}
           animate={selectedVariant}
-          key={selectedItem.text}
-        >
+      >
+        <AnimatePresence exitBeforeEnter={true}>
           <motion.div
             variants={textVariants}
             initial="initial"
             animate="animate"
             exit="exit"
+            key={selectedItem.text}
           >
             {selectedItem.text}
           </motion.div>
-          <motion.div>{lorem.short}</motion.div>
-        </ChangingTextLayout.Container>
-      </AnimatePresence>
+        </AnimatePresence>
+        <motion.div>{lorem.short}</motion.div>
+      </ChangingTextLayout.Container>
     </div>
   );
 };
