@@ -1,6 +1,8 @@
 import {colors} from './colors'
+import {textStyles} from './textStyles'
 export const theme = {
     colors,
+    textStyles,
     sizes: {
         landingParaWidth: '50%',
         staggerCardWidth: '300px',
