@@ -4,3 +4,4 @@ export * from "./Stagger";
 export * from "./PlaceholderText";
 export * from './TabSlider'
 export * from './Particles'
+export * from './ChangingText'
