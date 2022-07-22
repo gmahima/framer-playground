@@ -21,8 +21,8 @@ const CircleContainer = styled(motion.a)`
 const Circle = styled(motion.div)`
   ${({ theme }) => css`
     background-color: ${theme.colors.secondary};
-    width: 400px;
-    height: 400px;
+    width: 200px;
+    height: 200px;
     border-radius: 100%;
   `}
 `;
@@ -31,7 +31,7 @@ const Container = styled(motion.div)`
     position: relative;
     overflow: hidden;
     justify-self: start;
-    min-height: 60px;
+    min-height: 20px;
     background-color: ${theme.colors.highlight};
     padding-right: 20px;
     padding-left: 20px;
