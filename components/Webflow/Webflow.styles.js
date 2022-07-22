@@ -12,19 +12,8 @@ const ChangingTextWrapper = styled(motion.div)`
     align-self: end;
  `}
 `
-const ButtonBorderBottomContainer = styled(motion.a)`${({theme}) => css`
-    justify-self: center;
-    align-self: start;
 
-`}`
-const ButtonBorderBottomBorder = styled(motion.div)`
-${({theme}) => css`
-    background-color: ${theme.colors.primary};
-    height: 1px;
-
-`}
-`
 
 export const WebflowLayout = {
-  Container, ChangingTextWrapper, ButtonBorderBottomBorder, ButtonBorderBottomContainer
+  Container, ChangingTextWrapper
 };

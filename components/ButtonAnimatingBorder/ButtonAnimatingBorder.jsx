@@ -1,4 +1,4 @@
-import { WebflowLayout } from "./Webflow.styles";
+import { ButtonAnimatingBorderLayout } from "./ButtonAnimatingBorder.styles";
 const borderVariantsOut = {
     rest: {
       scaleX: 0,
@@ -37,29 +37,29 @@ const borderVariantsOut = {
   };
 export const ButtonAnimatingBorderOut = ({ children }) => {
   return (
-    <WebflowLayout.ButtonBorderBottomContainer
+    <ButtonAnimatingBorderLayout.Container
       initial="rest"
       whileHover="hover"
       animate="rest"
     >
       {children}
-      <WebflowLayout.ButtonBorderBottomBorder
+      <ButtonAnimatingBorderLayout.Border
         variants={borderVariantsOut}
-      ></WebflowLayout.ButtonBorderBottomBorder>
-    </WebflowLayout.ButtonBorderBottomContainer>
+      ></ButtonAnimatingBorderLayout.Border>
+    </ButtonAnimatingBorderLayout.Container>
   );
 };
 export const ButtonAnimatingBorderIn = ({ children }) => {
   return (
-    <WebflowLayout.ButtonBorderBottomContainer
+    <ButtonAnimatingBorderLayout.Container
       initial="rest"
       whileHover="hover"
       animate="rest"
     >
       {children}
-      <WebflowLayout.ButtonBorderBottomBorder
+      <ButtonAnimatingBorderLayout.Border
         variants={borderVariantsIn}
-      ></WebflowLayout.ButtonBorderBottomBorder>
-    </WebflowLayout.ButtonBorderBottomContainer>
+      ></ButtonAnimatingBorderLayout.Border>
+    </ButtonAnimatingBorderLayout.Container>
   );
 };
