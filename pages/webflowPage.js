@@ -1,10 +1,11 @@
 import { ChangingText, WebflowLayout } from "../components";
+import { ButtonBorderBottom } from "../components";
 import { lorem } from "../data";
 
 export default function WebflowPage() {
   return (
     <WebflowLayout.Container>
-      <div>{lorem.long}</div>
+      <ButtonBorderBottom>{"something"}</ButtonBorderBottom>
       <WebflowLayout.ChangingTextWrapper>
         <ChangingText></ChangingText>
       </WebflowLayout.ChangingTextWrapper>
