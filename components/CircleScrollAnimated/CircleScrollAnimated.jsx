@@ -1,17 +1,13 @@
 import { CircleScrollAnimatedLayout } from "./CircleScrollAnimated.styles";
 import { useScroll, useTransform } from "framer-motion";
 import { useEffect } from "react";
-export const CircleScrollAnimated = ({ ref1, ref2, ref3 }) => {
-  console.log(ref1.current);
-  useEffect(() => {
-    if (ref1.current) {
-      console.log(ref1.current.offsetLeft, ref1.current.offsetTop);
-    }
-  }, [ref1]);
+export const CircleScrollAnimated = ({ xa, ya }) => {
+  console.log(xa, ya);
   const { scrollYProgress, scrollY } = useScroll();
   const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.5, 1, 0.5]);
-  const xasdf = useTransform(scrollY, (value) => value > 200);
-  const x = useTransform(scrollYProgress, [0, 0.5, 1], [100, 20, 200]);
+
+  const xasdf = useTransform(scrollY, [0, 0.5, 1], xa);
+  const yasdf = useTransform(scrollY, [0, 0.5, 1], ya);
   //   const xPos = useTransform(pos, value => value.x)
   return (
     <>
@@ -19,7 +15,8 @@ export const CircleScrollAnimated = ({ ref1, ref2, ref3 }) => {
         style={{
           scaleX: scale,
           scaleY: scale,
-          x: x,
+          x: xasdf,
+          y: yasdf,
         }}
       ></CircleScrollAnimatedLayout.Container>
     </>
