@@ -5,3 +5,4 @@ export * from "./PlaceholderText";
 export * from './TabSlider'
 export * from './Particles'
 export * from './ChangingText'
+export * from './Webflow'

@@ -8,7 +8,7 @@ export const ChangingText = () => {
 
   return (
     <>
-      <ChangingTextLayout.Container
+      <ChangingTextLayout.MainContainer
         animate={{
           backgroundColor: [
             theme.colors.primary,
@@ -28,28 +28,33 @@ export const ChangingText = () => {
           times,
         }}
       >
-        <ChangingTextLayout.ChangingTextContainer>
-          <ChangingTextLayout.ChangingText
-            animate={{
-              y: ["0%", "0%", "-33%", "-33%", "-66%", "-66%", "0%"],
-            }}
-            transition={{
-              duration: 9,
-              repeat: Infinity,
-              repeatType: "loop",
-              type: "linear",
-              times,
-            }}
-          >
-            <p>Hi</p>
-            <p>Hello</p>
-            <p>How are you ?</p>
-          </ChangingTextLayout.ChangingText>
-        </ChangingTextLayout.ChangingTextContainer>
-        <ChangingTextLayout.OtherContent>
+        <ChangingTextLayout.Container>
+          <ChangingTextLayout.LeftContainer>{lorem.medium}</ChangingTextLayout.LeftContainer>
+          <ChangingTextLayout.RightContainer>
+            <ChangingTextLayout.ChangingTextContainer>
+              <ChangingTextLayout.ChangingText
+                animate={{
+                  y: ["0%", "0%", "-33%", "-33%", "-66%", "-66%", "0%"],
+                }}
+                transition={{
+                  duration: 9,
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  type: "linear",
+                  times,
+                }}
+              >
+                <p>Hi</p>
+                <p>Hello</p>
+                <p>How are you ?</p>
+              </ChangingTextLayout.ChangingText>
+            </ChangingTextLayout.ChangingTextContainer>
+          </ChangingTextLayout.RightContainer>
+        </ChangingTextLayout.Container>
+        <ChangingTextLayout.FixedContent>
           {lorem.short}
-        </ChangingTextLayout.OtherContent>
-      </ChangingTextLayout.Container>
+        </ChangingTextLayout.FixedContent>
+      </ChangingTextLayout.MainContainer>
     </>
   );
 };
