@@ -5,7 +5,7 @@ export const CircleScrollAnimated = () => {
   const { scrollYProgress } = useScroll();
   return (
     <CircleScrollAnimatedLayout.Container
-      style={{ scaleX: scrollYProgress }}
+      style={{ scaleX: scrollYProgress, scaleY: scrollYProgress }}
     ></CircleScrollAnimatedLayout.Container>
   );
 };
