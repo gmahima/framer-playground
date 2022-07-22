@@ -5,6 +5,7 @@ import {
   ButtonAnimatingBorderOut,
   ButtonAnimatingBorderIn,
   ButtonAnimatingCircle,
+  DivAnimatingToScroll,
 } from "../components";
 import { useBoundingclientrectRef } from "rooks";
 import { lorem } from "../data";
@@ -15,12 +16,7 @@ export default function WebflowPage() {
   console.log(boundingClientRect1);
   return (
     <WebflowLayout.Container>
-      <WebflowLayout.H1 ref={ref1}>hi</WebflowLayout.H1>
-      <div>{lorem.long}</div>
-      <WebflowLayout.H1 end ref={ref2}>
-        hi2
-      </WebflowLayout.H1>
-      {/* {boundingClientRect1 && (
+      {boundingClientRect1 && (
         <CircleScrollAnimated
           xa={[
             boundingClientRect1.x,
@@ -33,12 +29,19 @@ export default function WebflowPage() {
             boundingClientRect3.y,
           ]}
         ></CircleScrollAnimated>
-      )} */}
+      )}
+      <WebflowLayout.H1 ref={ref1}>hi</WebflowLayout.H1>
       <div>{lorem.long}</div>
+      <DivAnimatingToScroll></DivAnimatingToScroll>
+      <WebflowLayout.H1 end ref={ref2}>
+        hi2
+      </WebflowLayout.H1>
+      <div>{lorem.long}</div>
+      <DivAnimatingToScroll></DivAnimatingToScroll>
       <WebflowLayout.H1 ref={ref3} center>
-        {" "}
         hi3
       </WebflowLayout.H1>
+
       <ButtonAnimatingCircle>{"circ"}</ButtonAnimatingCircle>
       <ButtonAnimatingBorderOut>{"out"}</ButtonAnimatingBorderOut>
       <ButtonAnimatingBorderIn>{"in"}</ButtonAnimatingBorderIn>

@@ -9,3 +9,4 @@ export * from "./Webflow";
 export * from "./ButtonAnimatingBorder";
 export * from "./CircleScrollAnimated";
 export * from "./ButtonAnimatingCircle";
+export * from './DivAnimatingToScroll'

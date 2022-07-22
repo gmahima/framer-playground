@@ -16,7 +16,7 @@ export const CircleScrollAnimated = ({ xa, ya }) => {
           scaleX: scale,
           scaleY: scale,
           x: xasdf,
-          y: yasdf,
+          // y: yasdf,
         }}
       ></CircleScrollAnimatedLayout.Container>
     </>
