@@ -16,6 +16,7 @@ const Container = styled(motion.div)`
     overflow: hidden;
     display: grid;
     grid-template-columns: auto 1fr;
+    gap: 2rem;
   `}
 `;
 const LeftContainer = styled(motion.div)`

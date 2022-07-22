@@ -13,17 +13,14 @@ const ChangingTextWrapper = styled(motion.div)`
  `}
 `
 const ButtonBorderBottomContainer = styled(motion.a)`${({theme}) => css`
-    align-self: center;
-    justify-self: start;
-    overflow: hidden;
+    justify-self: center;
+    align-self: start;
 
 `}`
 const ButtonBorderBottomBorder = styled(motion.div)`
 ${({theme}) => css`
-
-    width: 100%;
     background-color: ${theme.colors.primary};
-    height: 3px;
+    height: 1px;
 
 `}
 `

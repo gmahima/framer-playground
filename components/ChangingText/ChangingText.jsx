@@ -38,9 +38,9 @@ export const ChangingText = () => {
           variants={{ initial: { x: 0 }, visible: { x: 0 } }}
         >
           <ChangingTextLayout.LeftContainer
-            initial={{ x: -60 }}
+            initial={{ x: -40 }}
             whileInView={{ x: 0 }}
-            transition={{ duration: 0.7, type: "tween", delay: 0.4 }}
+            transition={{ type: "ease", duration: 0.7}}
             viewport={{ once: true }}
           >
             {lorem.medium}
@@ -48,7 +48,7 @@ export const ChangingText = () => {
           <ChangingTextLayout.RightContainer
             initial={{ y: -40 }}
             whileInView={{ y: 0 }}
-            transition={{ duration: 0.8, type: "tween", delay: 0.4 }}
+            transition={{ type: "ease", duration: 0.7 }}
             viewport={{ once: true }}
           >
             <ChangingTextLayout.ChangingTextContainer>
@@ -69,7 +69,7 @@ export const ChangingText = () => {
                 <p>How are you ?</p>
               </ChangingTextLayout.ChangingText>
             </ChangingTextLayout.ChangingTextContainer>
-            <div>{lorem.short}</div>
+            <div>{lorem.medium}</div>
           </ChangingTextLayout.RightContainer>
         </ChangingTextLayout.Container>
         <ChangingTextLayout.FixedContent>
