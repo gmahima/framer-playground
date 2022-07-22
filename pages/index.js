@@ -1,4 +1,4 @@
-import { LandingParaList, ButtonBackToTop } from "../components";
+import { LandingParaList, ButtonBackToTop} from "../components";
 export default function Home() {
   return (
     <>
