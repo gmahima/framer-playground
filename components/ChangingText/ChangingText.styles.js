@@ -20,14 +20,11 @@ const Container = styled(motion.div)`
 `;
 const LeftContainer = styled(motion.div)`
   ${({ theme }) => css`
-    border: 1px solid ${theme.colors.bg};
     max-width: 200px;
   `}
 `;
 const RightContainer = styled(motion.div)`
-  ${({ theme }) => css`
-    border: 1px solid ${theme.colors.bg};
-  `}
+  ${({ theme }) => css``}
 `;
 const ChangingText = styled(motion.div)`
   ${({ theme }) => css`
@@ -60,5 +57,5 @@ export const ChangingTextLayout = {
   FixedContent,
   ChangingTextContainer,
   LeftContainer,
-  RightContainer
+  RightContainer,
 };
