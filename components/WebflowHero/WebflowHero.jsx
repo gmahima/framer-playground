@@ -13,7 +13,7 @@ export const WebflowHero = () => {
         </WebflowHeroLayout.OverflowDiv>
         <WebflowHeroLayout.OverflowDiv>
           <WebflowHeroLayout.CTAContainer>
-            <WebflowHeroLayout.CTAMessage></WebflowHeroLayout.CTAMessage>
+            <WebflowHeroLayout.CTAMessage>{webflow.heroCtaMessage}</WebflowHeroLayout.CTAMessage>
             <ButtonAnimatingCircle styleVariant={"primary"}>
               join
             </ButtonAnimatingCircle>

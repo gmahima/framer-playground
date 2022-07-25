@@ -32,9 +32,10 @@ const Heading = styled(motion.h1)`
 
 const CTAContainer = styled.div`
   ${({ theme }) => css`
+    padding-top: 28px;
     display: grid;
     grid-template-columns: 1fr auto;
-    border-top: 2px solid ${theme.colors.highlight}
+    border-top: 2px solid ${theme.colors.highlight};
   `}
 `;
 const CTAMessage = styled.div`
@@ -47,5 +48,5 @@ export const WebflowHeroLayout = {
   ContainerLeft,
   ContainerRight,
   CTAContainer,
-  CTAMessage
+  CTAMessage,
 };
