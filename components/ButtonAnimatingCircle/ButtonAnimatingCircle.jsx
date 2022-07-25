@@ -65,7 +65,7 @@ export const ButtonAnimatingCircle = ({ children }) => {
       }}
     >
       <ButtonAnimatingCircleLayout.ChildrenContainer>
-        asdf
+        {children}
       </ButtonAnimatingCircleLayout.ChildrenContainer>
       <ButtonAnimatingCircleLayout.OverflowDiv>
         <ButtonAnimatingCircleLayout.CircleContainer

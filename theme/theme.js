@@ -8,6 +8,7 @@ export const theme = {
         staggerCardWidth: '300px',
         staggerCardHeight: '300px',
         tabSliderWidth: '700px',
-        tabUnderlineHeight: '1px'
+        tabUnderlineHeight: '1px',
+        webflowBodyMaxWidth: '1230px'
     }
 }

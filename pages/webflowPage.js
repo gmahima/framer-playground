@@ -7,14 +7,29 @@ import {
   ButtonAnimatingCircle,
   DivAnimatingToScroll,
 } from "../components";
-import { lorem } from "../data";
-
+import { lorem, webflow } from "../data";
 export default function WebflowPage() {
   return (
     <WebflowLayout.Container>
-      <WebflowLayout.ChangingTextWrapper>
+      <WebflowLayout.BodyContainer>
+        <WebflowLayout.Navbar>
+          <WebflowLayout.NavHome
+            src={"logo.svg"}
+            alt="logo"
+          ></WebflowLayout.NavHome>
+          <WebflowLayout.NavLinks>
+            {webflow.navLinks.map((l) => (
+              <ButtonAnimatingBorderOut key={l.id}>
+                {l.name}
+              </ButtonAnimatingBorderOut>
+            ))}
+          </WebflowLayout.NavLinks>
+          <ButtonAnimatingCircle>Log In</ButtonAnimatingCircle>
+        </WebflowLayout.Navbar>
+      </WebflowLayout.BodyContainer>
+      {/* <WebflowLayout.ChangingTextWrapper>
         <ChangingText></ChangingText>
-      </WebflowLayout.ChangingTextWrapper>
+      </WebflowLayout.ChangingTextWrapper> */}
     </WebflowLayout.Container>
   );
 }
