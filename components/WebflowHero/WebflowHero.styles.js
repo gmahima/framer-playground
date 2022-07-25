@@ -35,11 +35,16 @@ const CTAContainer = styled.div`
     padding-top: 28px;
     display: grid;
     grid-template-columns: 1fr auto;
-    border-top: 2px solid ${theme.colors.highlight};
+    border-top: ${theme.sizes.webflowDefaultBorderWidth} solid ${theme.colors.highlight};
   `}
 `;
 const CTAMessage = styled.div`
-  ${({ theme }) => css``}
+  ${({ theme }) => css`
+    align-self: center;
+    font-size: 26px;
+    line-height: 24px;
+    font-weight: 500;
+  `}
 `;
 export const WebflowHeroLayout = {
   Container,

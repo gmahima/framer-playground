@@ -10,7 +10,7 @@ export const theme = {
     tabSliderWidth: "700px",
     tabUnderlineHeight: "1px",
     webflowBodyMaxWidth: "1230px",
-    webflowSecondaryButtonBorderWidth: "2px",
+    webflowDefaultBorderWidth: "2px",
     webflowHeroHeadingMaxWidth: 448,
   },
 };

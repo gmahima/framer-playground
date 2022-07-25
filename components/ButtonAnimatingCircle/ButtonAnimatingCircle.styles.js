@@ -31,9 +31,10 @@ const Container = styled(motion.div)`
   ${({ theme, styleVariant }) => css`
     min-height: 60px;
     display: inline-block;
-    ${styleVariant == "primary" && `background-color: ${theme.colors.primary};`}
+    ${styleVariant == "primary" &&
+    `background-color: ${theme.colors.primary}; color: ${theme.colors.bg};`}
     ${styleVariant == "secondary" &&
-    `border: ${theme.sizes.webflowSecondaryButtonBorderWidth} solid ${theme.colors.highlight};`}
+    `border: ${theme.sizes.webflowDefaultBorderWidth} solid ${theme.colors.highlight};`}
     text-transform: uppercase;
     position: relative;
     z-index: 1;
