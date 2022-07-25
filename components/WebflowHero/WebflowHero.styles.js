@@ -68,7 +68,10 @@ const Image = styled(motion.img)`
     css`
       margin-top: 96px;
     `}
+    border-radius: 50%;
+    box-shadow: ${theme.effects.webflowHeroImageShadow};
   `}
+  
 `;
 const SecondaryCTAContainer = styled(motion.div)`
   ${({ theme }) => css`

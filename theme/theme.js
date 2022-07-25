@@ -13,4 +13,7 @@ export const theme = {
     webflowDefaultBorderWidth: "2px",
     webflowHeroSecondaryCtaWidth: "180px",
   },
+  effects: {
+    webflowHeroImageShadow: "20px 113px 140px -30px rgba(0, 0, 0, 0.5)",
+  },
 };

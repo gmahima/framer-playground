@@ -31,10 +31,7 @@ const Container = styled(motion.div)`
   ${({ theme, styleVariant }) => css`
     min-height: 60px;
     display: inline-block;
-    ${styleVariant == "primary" &&
-    `background-color: ${theme.colors.primary}; color: ${theme.colors.bg};`}
-    ${styleVariant == "secondary" &&
-    `border: ${theme.sizes.webflowDefaultBorderWidth} solid ${theme.colors.highlight};`}
+
     text-transform: uppercase;
     position: relative;
     z-index: 1;
@@ -45,6 +42,11 @@ const Container = styled(motion.div)`
     align-items: center;
     justify-self: start;
     max-width: 100%;
+    ${styleVariant == "primary" &&
+    `background-color: ${theme.colors.primary}; color: ${theme.colors.bg};`}
+    ${styleVariant == "secondary" &&
+    `border: ${theme.sizes.webflowDefaultBorderWidth} solid ${theme.colors.highlight}; min-height: 45px;`}
+  
   `}
 `;
 const ChildrenContainer = styled(motion.div)`
