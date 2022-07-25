@@ -13,8 +13,8 @@ const CircleContainer = styled(motion.a)`
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background-color: ${theme.colors.primary};
+/* 
+    background-color: ${theme.colors.primary}; */
 
     width: 100%;
   `}
@@ -24,7 +24,7 @@ const Circle = styled(motion.div)`
     background-color: ${theme.colors.secondary};
     width: 200px;
     height: 200px;
-    border-radius: 100%;
+    border-radius: 100px;
   `}
 `;
 const Container = styled(motion.div)`
@@ -34,7 +34,7 @@ const Container = styled(motion.div)`
     background-color: ${theme.colors.highlight};
     position: relative;
     z-index: 1;
-    /* overflow: hidden; */
+    overflow: hidden;
     display: flex;
     min-width: 150px;
     justify-content: center;
@@ -48,9 +48,16 @@ const ChildrenContainer = styled(motion.div)`
     position: relative;
   `}
 `;
+const OverflowDiv = styled.div`
+  ${({theme}) => css`
+    overflow: hidden;
+  
+  `}
+`
 export const ButtonAnimatingCircleLayout = {
   CircleContainer,
   Container,
   Circle,
   ChildrenContainer,
+  OverflowDiv
 };
