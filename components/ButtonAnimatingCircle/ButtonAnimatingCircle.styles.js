@@ -13,7 +13,7 @@ const CircleContainer = styled(motion.a)`
     display: flex;
     justify-content: center;
     align-items: center;
-/* 
+    /* 
     background-color: ${theme.colors.primary}; */
 
     width: 100%;
@@ -21,17 +21,20 @@ const CircleContainer = styled(motion.a)`
 `;
 const Circle = styled(motion.div)`
   ${({ theme }) => css`
-    background-color: ${theme.colors.secondary};
+    background-color: ${theme.colors.highlight};
     width: 200px;
     height: 200px;
     border-radius: 100px;
   `}
 `;
 const Container = styled(motion.div)`
-  ${({ theme }) => css`
+  ${({ theme, variant }) => css`
     min-height: 60px;
     display: inline-block;
-    background-color: ${theme.colors.highlight};
+    ${variant == "primary" && `background-color: ${theme.colors.highlight}`}
+    ${variant == "secondary" &&
+    `border: ${theme.sizes.webflowSecondaryButtonBorderWidth} solid ${theme.colors.highlight};`}
+    
     position: relative;
     z-index: 1;
     overflow: hidden;
@@ -49,15 +52,14 @@ const ChildrenContainer = styled(motion.div)`
   `}
 `;
 const OverflowDiv = styled.div`
-  ${({theme}) => css`
+  ${({ theme }) => css`
     overflow: hidden;
-  
   `}
-`
+`;
 export const ButtonAnimatingCircleLayout = {
   CircleContainer,
   Container,
   Circle,
   ChildrenContainer,
-  OverflowDiv
+  OverflowDiv,
 };

@@ -10,20 +10,19 @@ const circleVariants = {
   hover: {
     scale: 1,
     transition: {
-      duration: 0.5
-    }
+      duration: 0.5,
+    },
   },
   hoverOut: {
     scale: 0,
-      transition: {
-        duration: 0.5
-      }
-    
+    transition: {
+      duration: 0.5,
+    },
   },
 };
-export const ButtonAnimatingCircle = ({ children }) => {
-  const controls = useAnimationControls();
 
+export const ButtonAnimatingCircle = ({ children, variant }) => {
+  const controls = useAnimationControls();
 
   const theme = useTheme();
   const circleContainerVariants = useMemo(() => {
@@ -50,21 +49,36 @@ export const ButtonAnimatingCircle = ({ children }) => {
       },
     };
   }, [theme]);
+  const childrenVariants = useMemo(() => {
+    return {
+      hover: {
+        color: theme.colors.bg,
+        transition: {
+          type: "ease",
+          ease: "easeIn",
+          duration: 0.5,
+        },
+      },
+    };
+  }, [theme]);
   return (
     <ButtonAnimatingCircleLayout.Container
+      variant={variant}
       initial="rest"
       whileHover="hover"
       animate={controls}
       // onMouseOut={() => {
       //   console.log("hi out");
-        
+
       // }}
       onMouseLeave={() => {
         console.log("hi");
         controls.start("hoverOut");
       }}
     >
-      <ButtonAnimatingCircleLayout.ChildrenContainer>
+      <ButtonAnimatingCircleLayout.ChildrenContainer
+        variants={childrenVariants}
+      >
         {children}
       </ButtonAnimatingCircleLayout.ChildrenContainer>
       <ButtonAnimatingCircleLayout.OverflowDiv>

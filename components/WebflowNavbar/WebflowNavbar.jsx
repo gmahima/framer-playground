@@ -16,7 +16,7 @@ export const WebflowNavbar = () => {
           </ButtonAnimatingBorderOut>
         ))}
       </WebflowNavbarLayout.NavLinks>
-      <ButtonAnimatingCircle>Log In</ButtonAnimatingCircle>
+      <ButtonAnimatingCircle variant="secondary">Log In</ButtonAnimatingCircle>
     </WebflowNavbarLayout.Navbar>
   );
 };
