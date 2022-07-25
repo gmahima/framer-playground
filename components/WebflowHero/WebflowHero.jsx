@@ -14,21 +14,38 @@ export const WebflowHero = () => {
         </WebflowHeroLayout.OverflowDiv>
         <WebflowHeroLayout.OverflowDiv>
           <WebflowHeroLayout.CTAContainer>
-            <WebflowHeroLayout.CTAMessage>{webflow.heroCtaMessage}</WebflowHeroLayout.CTAMessage>
+            <WebflowHeroLayout.CTAMessage>
+              {webflow.heroCtaMessage}
+            </WebflowHeroLayout.CTAMessage>
             <ButtonAnimatingCircle styleVariant={"primary"}>
-              join
+              {webflow.heroCta}
             </ButtonAnimatingCircle>
           </WebflowHeroLayout.CTAContainer>
         </WebflowHeroLayout.OverflowDiv>
       </WebflowHeroLayout.ContainerLeft>
       <WebflowHeroLayout.ContainerRight>
         <WebflowHeroLayout.ImagesContainer>
-            <WebflowHeroLayout.Image src="floatingCircleBig.png" size="big"></WebflowHeroLayout.Image>
-            <WebflowHeroLayout.Image src="floatingCircleSmall.png" size="small"></WebflowHeroLayout.Image>
+          <WebflowHeroLayout.Image
+            src="floatingCircleBig.png"
+            size="big"
+          ></WebflowHeroLayout.Image>
+          <WebflowHeroLayout.Image
+            src="floatingCircleSmall.png"
+            size="small"
+          ></WebflowHeroLayout.Image>
         </WebflowHeroLayout.ImagesContainer>
         <WebflowHeroLayout.SecondaryCTAContainer>
-            <WebflowHeroLayout.SecondaryCTAMessage>sdfg</WebflowHeroLayout.SecondaryCTAMessage>
-            <ButtonAnimatingBorderIn></ButtonAnimatingBorderIn>
+          <WebflowHeroLayout.SecondaryCTAMessage>
+            {webflow.heroSecondaryCtaMessage}
+          </WebflowHeroLayout.SecondaryCTAMessage>
+
+          <WebflowHeroLayout.SecondaryCTA>
+            <ButtonAnimatingBorderIn>
+              <WebflowHeroLayout.SecondaryCTAText>
+                {webflow.heroSecondaryCta}
+              </WebflowHeroLayout.SecondaryCTAText>
+            </ButtonAnimatingBorderIn>
+          </WebflowHeroLayout.SecondaryCTA>
         </WebflowHeroLayout.SecondaryCTAContainer>
       </WebflowHeroLayout.ContainerRight>
     </WebflowHeroLayout.Container>

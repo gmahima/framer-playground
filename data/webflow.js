@@ -6,5 +6,8 @@ export const webflow = {
     { name: "contacts", id: "d" },
   ],
   heroHeading: "The Investment Platform for Culture",
-  heroCtaMessage: "Starting from 9$"
+  heroCtaMessage: "Starting from 9$",
+  heroCta: "join",
+  heroSecondaryCtaMessage: "How trading works?",
+  heroSecondaryCta: "read",
 };
