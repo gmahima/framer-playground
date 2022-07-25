@@ -32,39 +32,10 @@ const H1 = styled(motion.h1)`
     `}
   `}
 `;
-const Navbar = styled.div`
-  ${({ theme }) => css`
-    display: grid;
-    grid-auto-flow: column;
-    justify-content: space-between;
-    align-items: end;
-  `}
-`;
-const NavHome = styled(motion.img)`
-  ${({ theme }) => css`
-    user-select: none;
-  `}
-`;
-const NavLinks = styled(motion.div)`
-  ${({ theme }) => css`
-    display: grid;
-    grid-auto-flow: column;
-    column-gap: 4rem;
-    align-self: center;
-  `}
-`;
-const NavCTA = styled(motion.div)`
-  ${({ theme }) => css`
-    
-  `}
-`;
+
 export const WebflowLayout = {
   Container,
   BodyContainer,
   ChangingTextWrapper,
-  H1,
-  Navbar,
-  NavHome,
-  NavLinks,
-  NavCTA,
+  H1
 };

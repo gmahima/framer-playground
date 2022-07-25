@@ -5,8 +5,9 @@ export * from "./PlaceholderText";
 export * from "./TabSlider";
 export * from "./Particles";
 export * from "./ChangingText";
-export * from "./Webflow";
+export * from "./WebflowContainers";
 export * from "./ButtonAnimatingBorder";
 export * from "./CircleScrollAnimated";
 export * from "./ButtonAnimatingCircle";
 export * from './DivAnimatingToScroll'
+export * from './WebflowNavbar'
