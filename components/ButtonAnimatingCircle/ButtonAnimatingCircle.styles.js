@@ -3,19 +3,20 @@ import styled, { css } from "styled-components";
 
 const CircleContainer = styled(motion.a)`
   ${({ theme }) => css`
-    justify-self: center;
-    align-self: start;
-    /* background-color: ${theme.colors.primary}; */
-    display: flex;
-    justify-items: center;
-    align-items: center;
     position: absolute;
     left: 0%;
     bottom: 0px;
     height: 100%;
     top: auto;
     right: 0%;
-    z-index: 0;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: ${theme.colors.primary};
+
+    width: 100%;
   `}
 `;
 const Circle = styled(motion.div)`
@@ -28,22 +29,23 @@ const Circle = styled(motion.div)`
 `;
 const Container = styled(motion.div)`
   ${({ theme }) => css`
-    position: relative;
-    overflow: hidden;
-    justify-self: start;
-    min-height: 20px;
+    min-height: 60px;
+    display: inline-block;
     background-color: ${theme.colors.highlight};
-    padding-right: 20px;
-    padding-left: 20px;
+    position: relative;
+    z-index: 1;
+    /* overflow: hidden; */
     display: flex;
+    min-width: 150px;
+    justify-content: center;
     align-items: center;
-    justify-items: center;
+    justify-self: start;
+    max-width: 100%;
   `}
 `;
 const ChildrenContainer = styled(motion.div)`
   ${({ theme }) => css`
     position: relative;
-    z-index: 100;
   `}
 `;
 export const ButtonAnimatingCircleLayout = {

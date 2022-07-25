@@ -6,20 +6,21 @@ export const ButtonAnimatingCircle = ({ children }) => {
   const circleVariants = useMemo(() => {
     return {
       rest: {
-        scale: 0,
         y: "110%",
       },
       hover: {
-        scale: 1,
         y: 0,
         transition: {
           type: "ease",
           ease: "easeIn",
         },
       },
-      animate: {
-        y: ["-110%", "110%"],
-      },
+      // animate: {
+      //   y: "-110%",
+      //   transition: {
+      //     duration: 0.3,
+      //   },
+      // },
     };
   }, [theme]);
   return (
@@ -32,7 +33,7 @@ export const ButtonAnimatingCircle = ({ children }) => {
         asdf
       </ButtonAnimatingCircleLayout.ChildrenContainer>
       <ButtonAnimatingCircleLayout.CircleContainer variants={circleVariants}>
-        <ButtonAnimatingCircleLayout.Circle></ButtonAnimatingCircleLayout.Circle>
+        {/* <ButtonAnimatingCircleLayout.Circle></ButtonAnimatingCircleLayout.Circle> */}
         {/* <ButtonAnimatingCircleLayout.Container>
         {children}
       </ButtonAnimatingCircleLayout.Container> */}
