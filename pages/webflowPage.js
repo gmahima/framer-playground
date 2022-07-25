@@ -6,7 +6,8 @@ import {
   ButtonAnimatingBorderIn,
   ButtonAnimatingCircle,
   DivAnimatingToScroll,
-  WebflowNavbar
+  WebflowNavbar,
+  WebflowHero,
 } from "../components";
 import { lorem, webflow } from "../data";
 export default function WebflowPage() {
@@ -14,6 +15,7 @@ export default function WebflowPage() {
     <WebflowLayout.Container>
       <WebflowLayout.BodyContainer>
         <WebflowNavbar></WebflowNavbar>
+        <WebflowHero></WebflowHero>
       </WebflowLayout.BodyContainer>
       {/* <WebflowLayout.ChangingTextWrapper>
         <ChangingText></ChangingText>
