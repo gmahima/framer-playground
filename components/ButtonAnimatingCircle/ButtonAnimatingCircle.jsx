@@ -10,19 +10,20 @@ const circleVariants = {
   hover: {
     scale: 1,
     transition: {
-      duration: 0.5,
-    },
+      duration: 0.5
+    }
   },
   hoverOut: {
     scale: 0,
-
-    transition: {
-      duration: 0.5,
-    },
+      transition: {
+        duration: 0.5
+      }
+    
   },
 };
 export const ButtonAnimatingCircle = ({ children }) => {
   const controls = useAnimationControls();
+
 
   const theme = useTheme();
   const circleContainerVariants = useMemo(() => {
@@ -56,7 +57,7 @@ export const ButtonAnimatingCircle = ({ children }) => {
       animate={controls}
       // onMouseOut={() => {
       //   console.log("hi out");
-
+        
       // }}
       onMouseLeave={() => {
         console.log("hi");

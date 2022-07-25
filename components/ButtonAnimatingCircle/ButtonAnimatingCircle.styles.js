@@ -22,21 +22,21 @@ const CircleContainer = styled(motion.a)`
 const Circle = styled(motion.div)`
   ${({ theme }) => css`
     background-color: ${theme.colors.secondary};
-    width: 200px;
-    height: 200px;
-    border-radius: 100px;
+    width: 120px;
+    height: 120px;
+    border-radius: 80px;
   `}
 `;
 const Container = styled(motion.div)`
   ${({ theme }) => css`
-    min-height: 60px;
+    min-height: 30px;
     display: inline-block;
     background-color: ${theme.colors.highlight};
     position: relative;
     z-index: 1;
     overflow: hidden;
     display: flex;
-    min-width: 150px;
+    min-width: 100px;
     justify-content: center;
     align-items: center;
     justify-self: start;
