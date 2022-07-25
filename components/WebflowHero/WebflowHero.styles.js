@@ -15,7 +15,11 @@ const ContainerLeft = styled(motion.div)`
   `}
 `;
 const ContainerRight = styled(motion.div)`
-  ${({ theme }) => css``}
+  ${({ theme }) =>
+    css`
+      display: grid;
+
+    `}
 `;
 const OverflowDiv = styled(motion.div)`
   ${({ theme }) =>
@@ -41,12 +45,13 @@ const CTAContainer = styled(motion.div)`
       ${theme.colors.highlight};
   `}
 `;
-const CTAMessage = styled(motion.div)`
+const CTAMessage = styled(motion.h4)`
   ${({ theme }) => css`
     align-self: center;
-    font-size: 26px;
-    line-height: 24px;
-    font-weight: 500;
+    font-size: ${theme.textStyles.h4};
+    line-height: ${theme.textStyles.lineHeightMedium};
+    margin: 0px;
+    font-weight: ${theme.textStyles.semiBold};
   `}
 `;
 const ImagesContainer = styled(motion.div)`
@@ -67,6 +72,24 @@ const Image = styled(motion.img)`
     `}
   `}
 `;
+const SecondaryCTAContainer = styled(motion.div)`
+  ${({ theme }) => css`
+    margin-top: -20px;
+    max-width: ${theme.sizes.webflowHeroSecondaryCtaWidth};
+    background-color: rebeccapurple;
+    justify-self: end;
+  `}
+`;
+const SecondaryCTAMessage = styled(motion.h3)`
+  ${({ theme }) => css`
+  margin-bottom: 24px;
+    margin-top: 0px;
+    font-size: ${theme.textStyles.h3};
+    line-height: ${theme.textStyles.lineHeightLarge};
+    font-weight: ${theme.textStyles.semiBold}
+  
+  `}
+`;
 export const WebflowHeroLayout = {
   Container,
   Heading,
@@ -77,4 +100,6 @@ export const WebflowHeroLayout = {
   CTAMessage,
   Image,
   ImagesContainer,
+  SecondaryCTAContainer,
+  SecondaryCTAMessage,
 };

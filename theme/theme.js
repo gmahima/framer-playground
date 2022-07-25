@@ -11,6 +11,6 @@ export const theme = {
     tabUnderlineHeight: "1px",
     webflowBodyMaxWidth: "1230px",
     webflowDefaultBorderWidth: "2px",
-    webflowHeroHeadingMaxWidth: 448,
+    webflowHeroSecondaryCtaWidth: "180px",
   },
 };

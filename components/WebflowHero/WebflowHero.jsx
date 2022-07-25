@@ -1,4 +1,5 @@
 import { webflow } from "../../data";
+import { ButtonAnimatingBorderIn } from "../ButtonAnimatingBorder";
 import { ButtonAnimatingCircle } from "../ButtonAnimatingCircle";
 import { WebflowHeroLayout } from "./WebflowHero.styles";
 
@@ -25,6 +26,10 @@ export const WebflowHero = () => {
             <WebflowHeroLayout.Image src="floatingCircleBig.png" size="big"></WebflowHeroLayout.Image>
             <WebflowHeroLayout.Image src="floatingCircleSmall.png" size="small"></WebflowHeroLayout.Image>
         </WebflowHeroLayout.ImagesContainer>
+        <WebflowHeroLayout.SecondaryCTAContainer>
+            <WebflowHeroLayout.SecondaryCTAMessage>sdfg</WebflowHeroLayout.SecondaryCTAMessage>
+            <ButtonAnimatingBorderIn></ButtonAnimatingBorderIn>
+        </WebflowHeroLayout.SecondaryCTAContainer>
       </WebflowHeroLayout.ContainerRight>
     </WebflowHeroLayout.Container>
   );
