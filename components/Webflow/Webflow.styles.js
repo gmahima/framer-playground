@@ -4,12 +4,14 @@ const Container = styled(motion.div)`
   ${({ theme }) => css`
     background-color: ${theme.colors.bg};
     min-height: 100vh;
-    display: grid;
+
   `}
 `;
 const ChangingTextWrapper = styled(motion.div)`
   ${({ theme }) => css`
-    align-self: end;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
   `}
 `;
 const H1 = styled(motion.h1)`
