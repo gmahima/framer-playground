@@ -30,17 +30,17 @@ export default function WebflowPage() {
           ]}
         ></CircleScrollAnimated>
       )}
-      <WebflowLayout.H1 ref={ref1}>hi</WebflowLayout.H1>
+      <h1 ref={ref1}>hi</h1>
       <div>{lorem.long}</div>
       <DivAnimatingToScroll></DivAnimatingToScroll>
-      <WebflowLayout.H1 end ref={ref2}>
+      <h1 end ref={ref2}>
         hi2
-      </WebflowLayout.H1>
+      </h1>
       <div>{lorem.long}</div>
       <DivAnimatingToScroll></DivAnimatingToScroll>
-      <WebflowLayout.H1 ref={ref3} center>
+      <h1 ref={ref3} center>
         hi3
-      </WebflowLayout.H1>
+      </h1>
 
       <ButtonAnimatingCircle>{"circ"}</ButtonAnimatingCircle>
       <ButtonAnimatingBorderOut>{"out"}</ButtonAnimatingBorderOut>

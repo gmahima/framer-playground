@@ -11,5 +11,6 @@ export const theme = {
     tabUnderlineHeight: "1px",
     webflowBodyMaxWidth: "1230px",
     webflowSecondaryButtonBorderWidth: "2px",
+    webflowHeroHeadingMaxWidth: 448,
   },
 };

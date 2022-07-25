@@ -21,7 +21,7 @@ const borderVariantsOut = {
     rest: {
       scaleX: 1,
       transition: {
-        duration: 0.1,
+        duration: 0.3,
         type: "ease",
         ease: "easeIn"
       }
@@ -29,7 +29,7 @@ const borderVariantsOut = {
     hover: {
       scaleX: 0,
       transition: {
-        duration: 0.1,
+        duration: 0.3,
         type: "ease",
         ease: "easeOut"
       }

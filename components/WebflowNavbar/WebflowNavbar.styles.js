@@ -20,6 +20,8 @@ const NavLinks = styled(motion.div)`
     grid-auto-flow: column;
     column-gap: 4rem;
     align-self: center;
+    font-size: ${theme.textStyles.sm};
+    text-transform: uppercase;
   `}
 `;
 const NavCTA = styled(motion.div)`

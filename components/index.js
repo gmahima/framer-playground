@@ -9,6 +9,6 @@ export * from "./WebflowContainer";
 export * from "./ButtonAnimatingBorder";
 export * from "./CircleScrollAnimated";
 export * from "./ButtonAnimatingCircle";
-export * from './DivAnimatingToScroll'
-export * from './WebflowNavbar'
-export * from './WebflowHero'
+export * from "./DivAnimatingToScroll";
+export * from "./WebflowNavbar";
+export * from "./WebflowHero";

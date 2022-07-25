@@ -28,12 +28,11 @@ const Circle = styled(motion.div)`
   `}
 `;
 const Container = styled(motion.div)`
-  ${({ theme, variant }) => css`
+  ${({ theme, styleVariant }) => css`
     min-height: 60px;
     display: inline-block;
-    ${variant == "primary" && `background-color: ${theme.colors.highlight}`}
-    ${variant == "secondary" &&
-    `border: ${theme.sizes.webflowSecondaryButtonBorderWidth} solid ${theme.colors.highlight};`}
+    ${styleVariant == "primary" && `background-color: ${theme.colors.primary};`}
+    ${styleVariant == "secondary" && `border: ${theme.sizes.webflowSecondaryButtonBorderWidth} solid ${theme.colors.highlight};`}
     
     position: relative;
     z-index: 1;

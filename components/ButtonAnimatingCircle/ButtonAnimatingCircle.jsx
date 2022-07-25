@@ -21,7 +21,7 @@ const circleVariants = {
   },
 };
 
-export const ButtonAnimatingCircle = ({ children, variant }) => {
+export const ButtonAnimatingCircle = ({ children, styleVariant }) => {
   const controls = useAnimationControls();
 
   const theme = useTheme();
@@ -63,7 +63,7 @@ export const ButtonAnimatingCircle = ({ children, variant }) => {
   }, [theme]);
   return (
     <ButtonAnimatingCircleLayout.Container
-      variant={variant}
+      styleVariant={styleVariant}
       initial="rest"
       whileHover="hover"
       animate={controls}

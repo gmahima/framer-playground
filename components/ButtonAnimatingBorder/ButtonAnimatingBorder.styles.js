@@ -9,7 +9,7 @@ const Container = styled(motion.a)`
 `;
 const Border = styled(motion.div)`
   ${({ theme }) => css`
-    background-color: ${theme.colors.primary};
+    background-color: ${theme.colors.highlight};
     height: 1px;
   `}
 `;
