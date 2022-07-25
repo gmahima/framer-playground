@@ -20,6 +20,12 @@ export const WebflowHero = () => {
           </WebflowHeroLayout.CTAContainer>
         </WebflowHeroLayout.OverflowDiv>
       </WebflowHeroLayout.ContainerLeft>
+      <WebflowHeroLayout.ContainerRight>
+        <WebflowHeroLayout.ImagesContainer>
+            <WebflowHeroLayout.Image src="floatingCircleBig.png" size="big"></WebflowHeroLayout.Image>
+            <WebflowHeroLayout.Image src="floatingCircleSmall.png" size="small"></WebflowHeroLayout.Image>
+        </WebflowHeroLayout.ImagesContainer>
+      </WebflowHeroLayout.ContainerRight>
     </WebflowHeroLayout.Container>
   );
 };

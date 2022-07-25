@@ -5,5 +5,5 @@ export const textStyles = {
   small: '14px',
   h1: '76px',
   semiBold: 500,
-  lineHeightLarge: '1rem'
+  lineHeightLarge: '1em'
 };
