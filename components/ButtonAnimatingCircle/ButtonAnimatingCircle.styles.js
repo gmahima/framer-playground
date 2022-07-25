@@ -50,7 +50,7 @@ const ChildrenContainer = styled(motion.div)`
 `;
 const OverflowDiv = styled.div`
   ${({theme}) => css`
-    overflow: hidden;
+    /* overflow: hidden; */
   
   `}
 `

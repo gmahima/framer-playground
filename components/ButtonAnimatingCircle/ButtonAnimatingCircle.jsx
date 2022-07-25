@@ -1,6 +1,6 @@
 import { ButtonAnimatingCircleLayout } from "./ButtonAnimatingCircle.styles";
 import { useTheme } from "styled-components";
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import { motion, useAnimationControls } from "framer-motion";
 const circleVariants = {
   rest: {
@@ -9,15 +9,21 @@ const circleVariants = {
   animate: {},
   hover: {
     scale: 1,
+    transition: {
+      duration: 0.5,
+    },
+  },
+  hoverOut: {
+    scale: 0,
+
+    transition: {
+      duration: 0.5,
+    },
   },
 };
 export const ButtonAnimatingCircle = ({ children }) => {
   const controls = useAnimationControls();
-  const handleMouseOut = () => {
-    controls.start({
-      y: ["0%", "-110%"],
-    });
-  };
+
   const theme = useTheme();
   const circleContainerVariants = useMemo(() => {
     return {
@@ -29,11 +35,11 @@ export const ButtonAnimatingCircle = ({ children }) => {
         transition: {
           type: "ease",
           ease: "easeIn",
-          duration: 0.3,
+          duration: 0.5,
         },
       },
       hoverOut: {
-        y: "-110%",
+        y: ["0%", "-110%", "110%"],
       },
       animate: {
         // y: "-110%",
@@ -47,13 +53,14 @@ export const ButtonAnimatingCircle = ({ children }) => {
     <ButtonAnimatingCircleLayout.Container
       initial="rest"
       whileHover="hover"
-      animate="animate"
-      onMouseOut={() => {
-        console.log("hi out");
-        controls.start("hoverOut");
-      }}
+      animate={controls}
+      // onMouseOut={() => {
+      //   console.log("hi out");
+
+      // }}
       onMouseLeave={() => {
         console.log("hi");
+        controls.start("hoverOut");
       }}
     >
       <ButtonAnimatingCircleLayout.ChildrenContainer>
