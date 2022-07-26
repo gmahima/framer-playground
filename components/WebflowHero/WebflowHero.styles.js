@@ -60,10 +60,19 @@ const ImagesContainer = styled(motion.div)`
     column-gap: 72px;
   `}
 `;
-const Image = styled(motion.img)`
+const Image = styled(motion.img).attrs({
+    draggable: false
+})`
   ${({ theme, size }) => css`
     width: ${size == "small" ? "231px" : "355px"};
     height: ${size == "small" ? "231px" : "355px"};
+    user-select: none;
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
     ${size == "big" &&
     css`
       margin-top: 96px;
